@@ -1,5 +1,9 @@
-import { Component,OnInit, Renderer2 } from '@angular/core';
-
+import {
+  Component,
+  OnInit,
+  Renderer2,
+  ElementRef
+} from '@angular/core';
 import { MessageService } from "primeng/api";
 
 import { PrimengModule } from "../../../primeng/primeng.module";
@@ -12,6 +16,7 @@ import { SidebarComponent } from "../../../shared/sidebar/sidebar.component";
 import { FooterComponent } from "../../../shared/footer/footer.component";
 import { ResumeService } from "../../../shared/services/resume.service";
 import { ImagesService } from "../../../shared/services/images.service";
+import { ProgressSpinnerModule } from "primeng/progressspinner";
 
 @Component({
   selector: 'app-home',
@@ -24,7 +29,8 @@ import { ImagesService } from "../../../shared/services/images.service";
     AboutMeComponent,
     SkillsComponent,
     WorksComponent,
-    ContactComponent
+    ContactComponent,
+    ProgressSpinnerModule
   ],
   providers: [ResumeService, MessageService],
   templateUrl: './home.component.html',
@@ -33,9 +39,11 @@ import { ImagesService } from "../../../shared/services/images.service";
 export class HomeComponent implements OnInit{
 
   image: string = '';
+  isLoading: boolean = true;
 
   constructor(private resumeService: ResumeService,
               private renderer: Renderer2,
+              private el: ElementRef,
               private messageService: MessageService,
               private imagesService: ImagesService) { }
 
@@ -51,6 +59,7 @@ export class HomeComponent implements OnInit{
   async loadImage(): Promise<void> {
     try {
       this.image = await this.imagesService.getHomeImage();
+      this.isLoading = false;
     } catch (error) {
       this.image = 'assets/images/home.png';
     }
@@ -83,7 +92,12 @@ export class HomeComponent implements OnInit{
   }
 
   confirm() {
-    this.messageService.add({key: 'resume', severity:'success', summary:'Message', detail:'Curriculum downloaded successfully!'});
+    this.messageService.add({
+      key: 'resume',
+      severity: 'success',
+      summary: 'Message',
+      detail: 'Curriculum downloaded successfully!'
+    });
     setTimeout(() => {
       this.messageService.clear();
     }, 2000);

@@ -11,6 +11,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { ChartModule } from 'primeng/chart';
 import { TooltipModule } from 'primeng/tooltip';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [],
@@ -26,7 +27,8 @@ import { TooltipModule } from 'primeng/tooltip';
     TabViewModule,
     ConfirmPopupModule,
     ChartModule,
-    TooltipModule
+    TooltipModule,
+    ProgressSpinnerModule
   ],
   exports: [
     MessagesModule,

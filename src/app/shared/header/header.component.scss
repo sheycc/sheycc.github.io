@@ -18,9 +18,15 @@
   border-bottom: 0;
   color: inherit;
   font-family: "Roboto Slab", serif;
-  font-size: 1.125em; }
+  font-size: 1.125em;
+  display: flex;
+  gap: 0.35em; }
 #header .icons {
   text-align: right; }
+.waving-icon:hover {
+  animation: waving 0.5s ease-in-out;
+  display: inline-block;
+}
 @media screen and (max-width: 1680px) {
   #header {
     padding-top: 5em; } }
@@ -36,3 +42,29 @@
     position: absolute;
     right: -0.5em;
     top: 0; } }
+
+
+@keyframes waving {
+  0%, 20%, 50%, 80%, 100% {
+    transform: rotate(0deg);
+  }
+  40%, 60% {
+    transform: rotate(30deg);
+  }
+}
+
+#header .typing {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(30, end) 1;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
