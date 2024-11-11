@@ -106,13 +106,13 @@ export class PieGraphicComponent {
 
     let result = '';
     if (years > 0) {
-      result += `${years} años`;
+      result += `${years} years`;
     }
     if (months > 0) {
-      result += years > 0 ? ` con ${months} meses` : `${months} meses`;
+      result += years > 0 ? ` and ${months} months` : `${months} months`;
     }
 
-    return result || '0 meses'; // Devuelve "0 meses" si ambos valores son 0
+    return result || '0 months'; // Devuelve "0 meses" si ambos valores son 0
   }
 
 
