@@ -46,6 +46,7 @@ export class LoginComponent {
           if(response === true){
             this.invalid = false;
             this.errorMsg = '';
+            console.log('hasta aki bien')
             this.router.navigate(['/admin/tabs']);
           } else{
             this.invalid = true;

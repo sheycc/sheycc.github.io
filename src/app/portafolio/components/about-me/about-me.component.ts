@@ -1,5 +1,6 @@
 import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { isPlatformBrowser } from "@angular/common";
+import { TranslatePipe } from "@ngx-translate/core";
 
 import { PrimengModule } from "../../../primeng/primeng.module";
 import { SkillsGraphicComponent } from "../skills-graphic/skills-graphic.component";
@@ -13,7 +14,8 @@ import { PieGraphicComponent } from "../pie-graphic/pie-graphic.component";
     PrimengModule,
     SkillsGraphicComponent,
     TimelinesGraphicComponent,
-    PieGraphicComponent
+    PieGraphicComponent,
+    TranslatePipe
   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'

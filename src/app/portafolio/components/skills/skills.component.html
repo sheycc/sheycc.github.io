@@ -1,6 +1,6 @@
 
 <header class="major">
-  <h2>Skills</h2>
+  <h2>{{ 'SKILLS.SECTION_TITLE' | translate }}</h2>
 </header>
 <div class="features" aria-labelledby="skills-heading">
   <article *ngFor="let skill of skills$ | async" role="region" [attr.aria-labelledby]="'skill-' + skill.uid">

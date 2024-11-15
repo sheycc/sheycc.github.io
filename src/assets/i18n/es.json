@@ -1,0 +1,42 @@
+{
+  "BANNER": {
+    "GREETING": "¡Hola! Me llamo Sheyla y soy Desarrolladora de Software.",
+    "INTRO": "Diseño y desarrollo aplicaciones de software.",
+    "DESCRIPTION": "Graduada en Ciencias de la Computación con conocimientos avanzados en programación y experiencia con varios lenguajes, tecnologías y herramientas para el desarrollo de software.",
+    "DOWNLOAD_CV": "Currículum",
+    "DOWNLOAD_ARIA_LABEL": "Descargar CV",
+    "ALT_IMAGE": "Imagen representativa del desarrollo de software con equipos colaborando en una laptop"
+  },
+  "ABOUT_ME": {
+    "SECTION_TITLE": "Sobre Mí",
+    "DESCRIPTION": "Graduada en Ciencias de la Computación con conocimientos avanzados en programación y amplia experiencia en el desarrollo de software utilizando tecnologías líderes como .Net y Angular. Además, tengo habilidades en el desarrollo de aplicaciones móviles con Flutter. Me destaco por mi iniciativa proactiva y mi capacidad para enfrentar desafíos con creatividad y resolución. Con un enfoque centrado en la excelencia e innovación, busco constantemente oportunidades para contribuir significativamente al éxito de los proyectos y superar expectativas.",
+    "EDUCATION_TITLE": "Educación",
+    "EDUCATION_DETAIL": "Licenciada en Ciencias de la Computación, Universidad de La Habana, Cuba.",
+    "EDUCATION_PERIOD": "Septiembre 2016 — Diciembre 2022",
+    "HOBBIES_TITLE": "Aficiones",
+    "HOBBIES_DETAILS": {
+      "TECHNOLOGY": "Me apasiona el desarrollo de software y mantenerme al día con los últimos avances en ciencia y tecnología",
+      "GAMES": ". Además, disfruto de los juegos de estrategia",
+      "SPORTS": ", los deportes",
+      "LIFE": " y la vida en general."
+    }
+  },
+  "SKILLS": {
+    "SECTION_TITLE": "Habilidades"
+  },
+  "WORKS": {
+    "SECTION_TITLE": "Proyectos"
+  },
+  "CONTACT": {
+    "SECTION_TITLE": "Contáctame",
+    "SECTION_DETAIL": "Aquí están mi correo profesional, número de teléfono y dirección personal. No dudes en contactarme en cualquier momento."
+  },
+  "SIDEBAR": {
+    "TITLE": "Menú",
+    "BANNER": "Inicio",
+    "ABOUT_ME": "Sobre Mí",
+    "SKILLS": "Habilidades",
+    "WORKS": "Proyectos",
+    "CONTACT": "Contáctame"
+  }
+}

@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import {ChartModule} from "primeng/chart";
-import {NgIf} from "@angular/common";
-import {Skill} from "../../../shared/interfaces/skill";
-import {SkillsService} from "../../../shared/services/skills.service";
+import { ChartModule } from "primeng/chart";
+import { NgIf } from "@angular/common";
 
 @Component({
   selector: 'app-pie-graphic',

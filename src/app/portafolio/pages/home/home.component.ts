@@ -4,6 +4,7 @@ import {
   Renderer2,
   ElementRef
 } from '@angular/core';
+import { TranslatePipe, TranslateService} from '@ngx-translate/core';
 import { MessageService } from "primeng/api";
 
 import { PrimengModule } from "../../../primeng/primeng.module";
@@ -30,7 +31,8 @@ import { ProgressSpinnerModule } from "primeng/progressspinner";
     SkillsComponent,
     WorksComponent,
     ContactComponent,
-    ProgressSpinnerModule
+    ProgressSpinnerModule,
+    TranslatePipe
   ],
   providers: [ResumeService, MessageService],
   templateUrl: './home.component.html',
@@ -45,7 +47,7 @@ export class HomeComponent implements OnInit{
               private renderer: Renderer2,
               private el: ElementRef,
               private messageService: MessageService,
-              private imagesService: ImagesService) { }
+              private imagesService: ImagesService ) { }
 
   ngOnInit(): void {
     this.setupSmoothScrolling();

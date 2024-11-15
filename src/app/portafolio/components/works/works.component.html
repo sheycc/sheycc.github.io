@@ -1,6 +1,6 @@
 
 <header class="major">
-  <h2>Works</h2>
+  <h2>{{ 'WORKS.SECTION_TITLE' | translate }}</h2>
 </header>
 <div class="posts" *ngIf="projects" role="region">
   <article *ngFor="let project of projects" role="listitem"  [attr.aria-labelledby]="'project-' + project.uid">

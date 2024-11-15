@@ -40,7 +40,7 @@ import { SkillsSubskillsComponent } from "../skills-subskills/skills-subskills.c
 export class DashboardComponent {
 
   activeIndex: number = 0;
-  constructor(private router: Router) {}
+  constructor(private router: Router) {  }
 
   onTabChange(event: any) {
     switch (event.index) {

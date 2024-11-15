@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslatePipe } from "@ngx-translate/core";
 import { FormsModule } from "@angular/forms";
 import { Observable } from "rxjs";
 
@@ -13,7 +14,8 @@ import { SubskillsService } from "../../../shared/services/subskills.service";
   standalone: true,
   imports: [
     PrimengModule,
-    FormsModule
+    FormsModule,
+    TranslatePipe
   ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslatePipe } from "@ngx-translate/core";
 
 import { PrimengModule } from "../../../primeng/primeng.module";
 import { Project } from "../../../shared/interfaces/project";
@@ -9,7 +10,8 @@ import { ImagesService } from "../../../shared/services/images.service";
   selector: 'app-works',
   standalone: true,
   imports: [
-    PrimengModule
+    PrimengModule,
+    TranslatePipe
   ],
   templateUrl: './works.component.html',
   styleUrl: './works.component.scss'
