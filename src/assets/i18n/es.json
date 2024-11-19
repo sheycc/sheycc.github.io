@@ -1,4 +1,7 @@
 {
+  "HEADER": {
+    "BY": "-"
+  },
   "BANNER": {
     "GREETING": "¡Hola! Me llamo Sheyla y soy Desarrolladora de Software.",
     "INTRO": "Diseño y desarrollo aplicaciones de software.",
@@ -15,10 +18,10 @@
     "EDUCATION_PERIOD": "Septiembre 2016 — Diciembre 2022",
     "HOBBIES_TITLE": "Aficiones",
     "HOBBIES_DETAILS": {
-      "TECHNOLOGY": "Me apasiona el desarrollo de software y mantenerme al día con los últimos avances en ciencia y tecnología",
-      "GAMES": ". Además, disfruto de los juegos de estrategia",
-      "SPORTS": ", los deportes",
-      "LIFE": " y la vida en general."
+      "TECHNOLOGY": "Me apasiona el desarrollo de software y mantenerme al día con los últimos avances en ciencia y tecnología ",
+      "GAMES": ". Además, disfruto de los juegos de estrategia ",
+      "SPORTS": ", los deportes ",
+      "LIFE": " y la vida en general "
     }
   },
   "SKILLS": {
@@ -38,5 +41,24 @@
     "SKILLS": "Habilidades",
     "WORKS": "Proyectos",
     "CONTACT": "Contáctame"
+  },
+  "DOWNLOAD_MESSAGE": {
+    "MESSAGE": "Mensaje",
+    "DETAIL_MESSAGE": "Currículum descargado correctamente!"
+  },
+  "RESUME_URL": {
+    "URL": "resumes/CV Spanish.pdf"
+  },
+  "PIE_GRAPHIC": {
+    "TITLE": "Distribución de Tiempo: Estudio, Prácticas y Trabajo (2016 - Presente)",
+    "STUDY_LABEL": "Tiempo de Estudio",
+    "INTERNSHIP_LABEL": "Tiempo de Prácticas",
+    "WORK_LABEL": "Tiempo de Trabajo",
+    "MONTHS_LABEL": "meses",
+    "YEARS_LABEL": "años",
+    "AND": "y"
+  },
+  "FOOTER": {
+    "DESIGN_BY": "Diseñado por"
   }
 }

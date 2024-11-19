@@ -36,13 +36,15 @@ export class CreateProjectComponent implements OnInit{
 
   project: Project = {
     name: '',
-    description: '',
+    description_en: '',
+    description_es: '',
     tech: ''
   };
 
   myForm: FormGroup = this.fb.group({
     name: ['', [Validators.required]],
-    description: ['', [Validators.required]],
+    description_en: ['', [Validators.required]],
+    description_es: ['', [Validators.required]],
     tech: ['', []],
   })
 
@@ -71,7 +73,8 @@ export class CreateProjectComponent implements OnInit{
   createProject() {
     if(this.myForm.valid){
       this.project.name = this.myForm.get('name')?.value;
-      this.project.description = this.myForm.get('description')?.value;
+      this.project.description_en = this.myForm.get('description_en')?.value;
+      this.project.description_es = this.myForm.get('description_es')?.value;
       this.project.tech = this.myForm.get('tech')?.value;
       //POST (Create)
       this.projectsService.createProject(this.project)
@@ -91,7 +94,8 @@ export class CreateProjectComponent implements OnInit{
   onSubmit() {
     if(this.myForm.valid && this.setID){
       this.project.name = this.myForm.get('name')?.value;
-      this.project.description = this.myForm.get('description')?.value;
+      this.project.description_en = this.myForm.get('description_en')?.value;
+      this.project.description_es = this.myForm.get('description_es')?.value;
       this.project.tech = this.myForm.get('tech')?.value;
       //PUT (Update)
       this.projectsService.updateProject(this.project)

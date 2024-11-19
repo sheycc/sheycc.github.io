@@ -1,0 +1,14 @@
+<!--<button id="floatingBtn"-->
+<!--  *ngIf="isVisible"-->
+<!--  class="floating-button"-->
+<!--  (click)="scrollToTop()">-->
+<!--  ↑-->
+<!--</button>-->
+<a role="button"
+   id="floatingBtn"
+   *ngIf="isVisible"
+   aria-label="Scroll Up"
+   class="floating-button icon button"
+   (click)="scrollToTop()">
+  <i class="fa-solid fa-arrow-up-long"></i>
+</a>

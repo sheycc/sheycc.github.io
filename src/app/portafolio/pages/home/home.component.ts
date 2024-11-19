@@ -18,6 +18,7 @@ import { FooterComponent } from "../../../shared/footer/footer.component";
 import { ResumeService } from "../../../shared/services/resume.service";
 import { ImagesService } from "../../../shared/services/images.service";
 import { ProgressSpinnerModule } from "primeng/progressspinner";
+import {FloatingButtonComponent} from "../../../shared/floating-button/floating-button.component";
 
 @Component({
   selector: 'app-home',
@@ -32,7 +33,8 @@ import { ProgressSpinnerModule } from "primeng/progressspinner";
     WorksComponent,
     ContactComponent,
     ProgressSpinnerModule,
-    TranslatePipe
+    TranslatePipe,
+    FloatingButtonComponent
   ],
   providers: [ResumeService, MessageService],
   templateUrl: './home.component.html',
@@ -47,7 +49,8 @@ export class HomeComponent implements OnInit{
               private renderer: Renderer2,
               private el: ElementRef,
               private messageService: MessageService,
-              private imagesService: ImagesService ) { }
+              private imagesService: ImagesService,
+              private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.setupSmoothScrolling();
@@ -94,14 +97,16 @@ export class HomeComponent implements OnInit{
   }
 
   confirm() {
-    this.messageService.add({
-      key: 'resume',
-      severity: 'success',
-      summary: 'Message',
-      detail: 'Curriculum downloaded successfully!'
+    this.translate.get(['DOWNLOAD_MESSAGE.MESSAGE', 'DOWNLOAD_MESSAGE.DETAIL_MESSAGE']).subscribe(translations => {
+      this.messageService.add({
+        key: 'resume',
+        severity: 'success',
+        summary: translations['DOWNLOAD_MESSAGE.MESSAGE'],
+        detail: translations['DOWNLOAD_MESSAGE.DETAIL_MESSAGE']
+      });
+      setTimeout(() => {
+        this.messageService.clear();
+      }, 2000);
     });
-    setTimeout(() => {
-      this.messageService.clear();
-    }, 2000);
   }
 }

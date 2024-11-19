@@ -28,14 +28,25 @@
         </div>
 
         <div class="col-12">
-          <span>Description</span>
+          <span>Description EN</span>
           <textarea type="text"
-                    formControlName="description"
-                    placeholder="Enter a description">
+                    formControlName="description_en"
+                    placeholder="Enter a description in English">
           </textarea>
           <span errorMsg
-                [msg]="getErrorMsg('description', myForm)"
-                *ngIf="invalidField('description', initialFormValues, myForm)">
+                [msg]="getErrorMsg('description_en', myForm)"
+                *ngIf="invalidField('description_en', initialFormValues, myForm)">
+          </span>
+        </div>
+        <div class="col-12">
+          <span>Description ES</span>
+          <textarea type="text"
+                    formControlName="description_es"
+                    placeholder="Enter a description in Spanish">
+          </textarea>
+          <span errorMsg
+                [msg]="getErrorMsg('description_es', myForm)"
+                *ngIf="invalidField('description_es', initialFormValues, myForm)">
           </span>
         </div>
       </div>

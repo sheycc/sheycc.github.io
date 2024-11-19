@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslatePipe } from "@ngx-translate/core";
+import {TranslatePipe, TranslateService} from "@ngx-translate/core";
 
 import { PrimengModule } from "../../../primeng/primeng.module";
 import { Project } from "../../../shared/interfaces/project";
@@ -21,7 +21,9 @@ export class WorksComponent implements OnInit {
   imagesMap: { [key: string]: string[] } = {};
   projects: Project[] | undefined;
 
-  constructor(private projectsService: ProjectsService, private imagesService: ImagesService) {}
+  constructor(private projectsService: ProjectsService,
+              private imagesService: ImagesService,
+              private translate: TranslateService) {}
 
   ngOnInit() {
     // Obtener todos los proyectos y las imagenes de cada uno
@@ -44,6 +46,10 @@ export class WorksComponent implements OnInit {
 
   getImages(uid: string) {
     return this.imagesMap[uid];
+  }
+
+  getProjectDescription(project: Project) {
+    return this.translate.currentLang == 'en' ? project.description_en : project.description_es;
   }
 
 }

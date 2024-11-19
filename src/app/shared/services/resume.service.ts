@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import { finalize } from "rxjs";
 import { AngularFireStorage } from "@angular/fire/compat/storage";
 import { getDownloadURL, getStorage, ref } from "@angular/fire/storage";
 
 import { getFileName } from "../utils";
+import {TranslateService} from "@ngx-translate/core";
 
 
 @Injectable({
@@ -12,10 +13,12 @@ import { getFileName } from "../utils";
 export class ResumeService {
 
   resumeURL: string = '';
-  byDefaultResume: string = `resumes/CV.pdf`;
+  byDefaultResume: string = `resumes/CV English.pdf`;
   fileName: string = 'No file chosen';
 
-  constructor(private storage: AngularFireStorage) {  }
+  constructor(private storage: AngularFireStorage,
+              private translate: TranslateService) {  }
+
 
   async uploadFile(event: any) {
     const file = event.target.files[0];
@@ -45,10 +48,12 @@ export class ResumeService {
 
   async download() {
     try {
-      if(!this.resumeURL) {
-        this.resumeURL = this.byDefaultResume;
-        this.fileName = getFileName(this.resumeURL);
-      }
+      this.translate.get(['RESUME_URL.URL']).subscribe(translations => {
+        this.resumeURL = translations['RESUME_URL.URL'];
+      });
+
+      this.fileName = getFileName(this.resumeURL);
+
       const storage = getStorage();
       const starsRef = ref(storage, this.resumeURL);
 

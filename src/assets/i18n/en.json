@@ -1,4 +1,7 @@
 {
+  "HEADER": {
+    "BY": "by"
+  },
   "BANNER": {
     "GREETING": "Hi! My name is Sheyla and I'm a Software Developer.",
     "INTRO": "I design and build software applications.",
@@ -15,7 +18,7 @@
     "EDUCATION_PERIOD": "September 2016 — December 2022",
     "HOBBIES_TITLE": "Hobbies",
     "HOBBIES_DETAILS": {
-      "TECHNOLOGY": "I am passionate about software development and staying up to date with the latest developments in science and technology",
+      "TECHNOLOGY": "I am passionate about software development and staying up to date with the latest developments in science and technology ",
       "GAMES": ". Additionally, I enjoy strategy games ",
       "SPORTS": ", sports ",
       "LIFE": " and life in general "
@@ -38,5 +41,24 @@
     "SKILLS": "Skills",
     "WORKS": "Works",
     "CONTACT": "Get in Touch"
+  },
+  "DOWNLOAD_MESSAGE": {
+    "MESSAGE": "Message",
+    "DETAIL_MESSAGE": "Resume download successfully!"
+  },
+  "RESUME_URL": {
+    "URL": "resumes/CV English.pdf"
+  },
+  "PIE_GRAPHIC": {
+    "TITLE": "Distribution of Time: Study, Internship and Work (2016 - Present)",
+    "STUDY_LABEL": "Study Time",
+    "INTERNSHIP_LABEL": "Internship Time",
+    "WORK_LABEL": "Work Time",
+    "MONTHS_LABEL": "months",
+    "YEARS_LABEL": "years",
+    "AND": "and"
+  },
+  "FOOTER": {
+    "DESIGN_BY": "Design by"
   }
 }

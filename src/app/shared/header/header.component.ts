@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import { RouterLink } from "@angular/router";
 import { NgIf } from "@angular/common";
-import { TranslateService } from "@ngx-translate/core";
+import {TranslatePipe, TranslateService} from "@ngx-translate/core";
 
 import { AuthService } from "../../auth/services/auth.service";
 import { PrimengModule } from "../../primeng/primeng.module";
@@ -12,7 +12,8 @@ import { PrimengModule } from "../../primeng/primeng.module";
   imports: [
     RouterLink,
     NgIf,
-    PrimengModule
+    PrimengModule,
+    TranslatePipe
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'

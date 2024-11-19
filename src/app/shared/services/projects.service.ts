@@ -36,7 +36,8 @@ export class ProjectsService {
     const _project: Project = {
       uid: projectId,
       name: projectRequest.name,
-      description: projectRequest.description,
+      description_en: projectRequest.description_en,
+      description_es: projectRequest.description_es,
       tech: projectRequest.tech
     };
 
@@ -51,7 +52,8 @@ export class ProjectsService {
   updateProject(projectRequest: Project): Observable<Project | null> {
     const _project: Partial<Project> = {
       name: projectRequest.name,
-      description: projectRequest.description,
+      description_en: projectRequest.description_en,
+      description_es: projectRequest.description_es,
       tech: projectRequest.tech
     };
 
