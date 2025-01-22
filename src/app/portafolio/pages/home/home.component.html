@@ -6,13 +6,13 @@
   <div id="main">
     <div class="inner">
 
-      <!-- Header -->
-      <app-header></app-header>
-
       <div class="spinner-center" *ngIf="isLoading; else loaded">
         <p-progressSpinner ariaLabel="loading" />
       </div>
       <ng-template #loaded>
+        <!-- Header -->
+        <app-header></app-header>
+
         <!-- Banner -->
         <section id="banner">
           <div class="content">

@@ -18,7 +18,7 @@ import { FooterComponent } from "../../../shared/footer/footer.component";
 import { ResumeService } from "../../../shared/services/resume.service";
 import { ImagesService } from "../../../shared/services/images.service";
 import { ProgressSpinnerModule } from "primeng/progressspinner";
-import {FloatingButtonComponent} from "../../../shared/floating-button/floating-button.component";
+import { FloatingButtonComponent } from "../../../shared/floating-button/floating-button.component";
 
 @Component({
   selector: 'app-home',
