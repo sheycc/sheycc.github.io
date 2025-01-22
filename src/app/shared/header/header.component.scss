@@ -72,15 +72,24 @@
 #header .typing {
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 3s steps(30, end) 1;
+  animation: typing 2s steps(18, end), blink 0.5s step-end infinite alternate;
 }
 
 @keyframes typing {
   from {
-    width: 0;
+    width: 0; /* Comienza desde 0 caracteres */
   }
   to {
-    width: 100%;
+    width: 18ch; /* Longitud del texto (18 caracteres) */
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: black; /* Cursor visible */
+  }
+  to {
+    border-right-color: transparent; /* Cursor invisible */
   }
 }
 
